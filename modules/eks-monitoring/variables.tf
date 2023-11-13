@@ -462,6 +462,12 @@ variable "enable_external_secrets" {
   default     = true
 }
 
+variable "external_secrets_helm_config" {
+  description = "Helm provider config for external secrets"
+  type        = any
+  default     = {}
+}
+
 variable "grafana_api_key" {
   description = "Grafana API key for the Amazon Managed Grafana workspace. Required if `enable_external_secrets = true`"
   type        = string
